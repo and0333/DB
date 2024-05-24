@@ -1,0 +1,1 @@
+select TFull_name, TAccount_number, Tposition from workproject.teacher where TAccount_number = '$TAccount_number'

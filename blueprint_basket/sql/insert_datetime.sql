@@ -1,0 +1,1 @@
+insert workproject.protection_schedule values(NULL, '$date', '$time', '$hall', '$number', NULL, NULL)

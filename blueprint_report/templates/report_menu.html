@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню выбора</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+<h1 style="height: 15vh;">
+    <p>ЭУ</p>
+</h1>
+<main class="main_menu" style="height: 85vh;">
+    <div class="menu_navigation">
+        <div class="input_menu">
+            {% for key in key_list %}
+            <a href="{{url_for('bp_report.create_report', proc=conf[key][0], sql=conf[key][1])}}">Создать {{key}}</a>
+            <a href="{{url_for('bp_report.report_show', sql=conf[key][1])}}" style="margin-bottom: 1em;">Показать {{key}}</a>
+            {% endfor %}
+        </div>
+        <a href="{{url_for('bp_auth.form_menu')}}">Вернуться в меню выбора</a>
+        <a href="{{url_for('main_menu')}}">Вернуться в главное меню</a>
+    </div>
+    <img src="../static/img/comission.jpg" style="height: 85vh;">
+</main>
+</body>
+</html>

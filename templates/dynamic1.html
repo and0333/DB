@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню выбора</title>
+    <link rel="stylesheet" href="../../static/style.css">
+</head>
+
+<body>
+<h1 style="height: 15vh;">
+    <p>ЭУ МГТУ</p>
+</h1>
+<main class="main_menu" style="height: 85vh; background-color: #ffffff;">
+    <div class="menu_navigation" style="background-color: #ffffff;">
+        <h2 style="margin-top: 10px; margin-bottom: 10px; background-color: #ffffff; text-align: left;">Результаты по вашему поиску</h2>
+        <table style="display: inline-block;width: 120px;text-align:left;font-size: 15px ; background-color: #ffffff;">
+            <tr style="font-size: 17px; background-color: #ffffff;">
+                         {% if 'idproject' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">id проекта</th>
+                        {% endif %}
+                         {% if 'TAccount_number' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">номер преподавателя</th>
+                        {% endif %}
+                         {% if 'TDate_of_birth' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">Дата рождения</th>
+                        {% endif %}
+                         {% if 'Date_of_enrollment' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">дата трудоустройства</th>
+                        {% endif %}
+                         {% if 'TAccount_number' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">номер преподавателя</th>
+                        {% endif %}
+                        {% if 'nameproject' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">название проекта</th>
+                        {% endif %}
+                        {% if 'SFull_name' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">Имя студента</th>
+                        {% endif %}
+                        {% if 'SGroup' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">Группа</th>
+                        {% endif %}
+                        {% if 'TFull_name' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">Имя преподавателя</th>
+                        {% endif %}
+                        {% if 'Date_of_protection' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">Дата защиты</th>
+                        {% endif %}
+                        {% if 'The_received_assessment' in key_list %}
+                        <th style="border: 1px solid black;text-align: center;padding: 2px">полученная оценка</th>
+                        {% endif %}
+                    </tr>
+            {% for item in result %}
+            <tr>
+                {% for key in key_list %}
+                    <td style="border: 1px solid black;text-align: center;padding: 2px">{{item[key]}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{url_for('bp_auth.form_menu')}}" style="font-size: 24px; text-align: center;">Вернуться в меню выбора</a>
+        <a href="{{url_for('bp_auth.sign_out')}}" style="font-size: 24px; text-align: center;">Выйти из системы</a>
+    </div>
+
+</main>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню выбора</title>
+    <link rel="stylesheet" href="../../static/style.css">
+</head>
+
+<body>
+<h1 style="height: 15vh;">
+    <p>ЭУ МГТУ</p>
+</h1>
+<main class="main_menu" style="height: 85vh;">
+    <div class="menu_navigation">
+        <h2 style="margin-top: 10px; margin-bottom: 10px">Результаты по вашему поиску</h2>
+        <table border="1">
+                <tr>
+                    {% for key in key_list %}
+                    <th>{{key}}</th>
+                    {% endfor %}
+                </tr>
+                {% for item in result %}
+                <tr>
+                    {% for key in key_list %}
+                    <td>{{item[key]}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        <a href="{{url_for('bp_auth.form_menu')}}" style="font-size: 24px">Вернуться в меню выбора</a>
+        <a href="{{url_for('bp_auth.sign_out')}}" style="font-size: 24px">Выйти из системы</a>
+    </div>
+    <img src="../../static/img/comission.jpg" style="height: 85vh;">
+</main>
+</body>
+</html>

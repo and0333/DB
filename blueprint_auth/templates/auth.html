@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>
+        <p>ЭУ</p>
+    </h1>
+    <main class="main_menu">
+        <img src="../static/img/proj5.jpg">
+        <div class="menu_navigation">
+            <div class="input_menu">
+                <p>Введите параметры поиска</p>
+                <form action="" method="post" class="search_form">
+                    <div class="input_form">
+                        <label for="login">Введите логин:</label>
+                        <input type="text" name="login" id="login">
+                    </div>
+                    <div class="input_form">
+                        <label for="password">Введите пароль:</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <input type="submit" class="button" value="Отправить">
+                    <input type="reset" class="button" value="Очистить">
+                </form>
+                <div class="input_navigation">
+                    <a href="{{url_for('main_menu')}}">Вернуться в главное меню</a>
+                    {% if error %}
+                    <p class=error><strong>Произошла ошибка:</strong> {{ error }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

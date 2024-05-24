@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню выбора</title>
+    <link rel="stylesheet" href="../../../static/style.css">
+</head>
+
+<body>
+<h1 style="height: 15vh;">
+    <p>ЭУ</p>
+</h1>
+<main class="main_menu" style="height: 85vh;">
+    <div class="menu_navigation">
+        <p class="menu_title" style="font-size: 36px; margin-top: 1em;">{{ msg }}</p>
+        <a href="{{url_for('bp_report.report_show', sql=sql, year=y, month=m)}}">Показать отчёт</a>
+        <a href="{{url_for('bp_auth.form_menu')}}">Вернуться в меню выбора</a>
+        <a href="{{url_for('main_menu')}}">Вернуться в главное меню</a>
+    </div>
+    <img src="../../../static/img/comission.jpg" style="height: 85vh;">
+</main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "отчёт о кол-ве полученных оценок": [
+    "assessment_count",
+    "assessment_count.sql"
+  ],
+  "отчёт о кол-ве защищённых работ": [
+    "protection_count",
+    "protection_count.sql"
+  ]
+}

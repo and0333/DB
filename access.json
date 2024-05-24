@@ -1,0 +1,17 @@
+{
+  "decan": [
+    "bp_query",
+    "bp_basket",
+    "bp_report",
+    "bp_auth"
+  ],
+  "student": [
+    "bp_query",
+    "bp_query.form_menu",
+    "bp_query.products_for_users"
+  ],
+  "teacher": [
+    "bp_query",
+    "bp_report"
+  ]
+}

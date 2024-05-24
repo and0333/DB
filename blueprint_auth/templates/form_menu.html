@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Main Menu</title>
+</head>
+<body>
+    <h1>
+        <p>ЭУ</p>
+    </h1>
+    <main class="main_menu">
+
+        <div class="menu_navigation">
+            <div class="navigation_text">
+                <p class="menu_title">Главное меню</p>
+
+                {% if not user_id %}
+                <h2>{{error}}</h2>
+                <div style="height: 10px; clear:both;"></div>
+                <a href="{{url_for('auth')}}" style="font-size: 24px">Авторизоваться</a>
+                {% elif error %}
+                <h2>{{error}}</h2>
+                <div style="height: 10px; clear:both;"></div>
+                {% endif %}
+
+                <a href="{{url_for('bp_report.work_with_reports')}}" style="font-size: 24px">Работа с отчётами</a>
+                <div style="height: 10px; clear:both;"></div>
+
+                <a class="btn" href="{{url_for('bp_query.query_menu')}}"  style="font-size: 24px">Работа с запросами</a>
+                <div style="height: 10px; clear:both;"></div>
+
+                <a class="btn" href="{{url_for('bp_basket.choose')}}"  style="font-size: 24px">Составить комиссию</a>
+                <div style="height: 10px; clear:both;"></div>
+                {%if user_id %}
+                <a href="{{url_for('bp_auth.sign_out')}}" style="font-size: 24px">Выйти из системы</a>
+                <div style="height: 10px; clear:both;"></div>
+                {% endif %}
+                <div style="height: 20px; clear:both;"></div>
+
+            </div>
+        </div>
+        <img src="../static/img/proj2.jpg">
+    </main>
+</body>
+</html>
+

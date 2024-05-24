@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск клиентов</title>
+    <link href="{{url_for('static', filename='sem2.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-primary">
+            <h1>ЭУ</h1><center></center>
+        </header>
+        <nav class="navigation-primary" aria-label="Primary">
+            <ul>
+
+                <li> <a href="{{url_for('bp_auth.form_menu')}}">Вернуться в главное меню</a></li>
+                <li><a href="{{url_for('bp_auth.sign_out')}}">Выход из системы</a></li>
+
+            </ul>
+        </nav>
+        <div class="content-container">
+            <center>
+            <h1>Результаты не найдены</h1>
+            <br>
+            <a href="{{url_for('bp_query.query_menu')}}">Попробовать снова</a>
+            <br><br>
+            <a href="{{url_for('main_menu')}}">Вернуться на главную страницу</a>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

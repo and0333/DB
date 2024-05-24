@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню запросов</title>
+    <link rel="stylesheet" href="../../static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .menu {
+            margin: 20px 0;
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            background-color: #c8e6c9; /* Основной зеленый цвет для элементов меню */
+            color: #00600f; /* Темно-зеленый цвет текста */
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #a5d6a7; /* Более светлый зеленый цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+<h1 style="height: 10vh;">
+    <p>ЭУ</p>
+</h1>
+    <center>
+        <h2 style="color: #2e7d32;">Меню запросов</h2>
+        <form action="" method="post">
+            <div class="menu">
+                {% if group_name == 'student' %}
+                <a href="{{url_for('bp_query.products_for_users')}}" style="font-size: 24px">посмотреть все свои проекты активные</a>
+                <div style="height: 10px; clear:both;"></div>
+                {% endif %}
+                {% if group_name != 'student' %}
+                <a href="{{url_for('bp_query.all_providers')}}" style="font-size: 24px">Все преподаватели</a>
+                <div style="height: 10px; clear:both;"></div>
+                <a href="{{url_for('bp_query.all_products')}}" style="font-size: 24px">Все проекты</a>
+                <div style="height: 10px; clear:both;"></div>
+                {% endif %}
+                <a href="{{url_for('bp_query.query_students_by_group')}}" style="font-size: 24px">Все студенты по группе</a>
+                <div style="height: 10px; clear:both;"></div>
+                {% if group_name != 'student' %}
+                <a href="{{url_for('bp_query.query_project_by_name_of_student')}}" style="font-size: 24px">Все проекты по имени студента</a>
+                <div style="height: 10px; clear:both;"></div>
+                <a href="{{url_for('bp_query.query_project_by_name_of_teacher')}}" style="font-size: 24px">Все проекты по имени преподавателя</a>
+                <div style="height: 10px; clear:both;"></div>
+                {% endif %}
+                <a href="{{url_for('bp_auth.form_menu')}}" style="font-size: 24px; margin-top: 24px;">Вернуться в главное меню</a>
+                <div style="height: 10px; clear:both;"></div>
+                <a href="{{url_for('bp_auth.sign_out')}}" style="font-size: 24px">Выйти из системы</a>
+                <div style="height: 10px; clear:both;"></div>
+
+            </div>
+        </form>
+    </center>
+</body>
+</html>

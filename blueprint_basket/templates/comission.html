@@ -1,0 +1,25 @@
+{% macro render_item(item, TAccount_number, show_form = False) %}
+
+<div class="item_cell">
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-md-8">
+                <b>Фамилия и.о.:</b>
+                <span> {{item['TFull_name']}}</span>
+                <br>
+                <b>Должность:</b>
+                <span> {{item['Tposition']}}</span>
+                <br>
+            </div>
+            <div class="col-md-4"  style="margin-top: 20px">
+                {% if show_form %}
+                <form method="post" action="">
+                    <input class="cell_button" type="submit" name="send" value="Добавить">
+                    <input type="hidden" value="{{TAccount_number}}" name="TAccount_number" id="{{TAccount_number}}">
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 32px;
+    padding-top: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #3e5c76;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    color: #3e5c76;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+ol {
+    color: #3e5c76;
+    margin-bottom: 16px;
+}
+
+h1>p {
+    display: flex;
+    height: 96px;
+    background-color: #0080a0;
+    align-items: left;
+    justify-content: left;
+    margin-left: 15px;
+    font-size: 64px;
+    color: #00ffff;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    background-color: #fff9ef;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 64px;
+    color: #3e5c76;
+    border-bottom: 3px solid #3e5c76;
+    padding: 0 38px;
+}
+
+.header_img {
+    display: flex;
+    width: 30%;
+}
+
+.header_img>img {
+    height: 102px;
+}
+
+header>p {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    font-size: 64px;
+}
+
+.header_profile {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 30%;
+    align-items: center;
+    justify-content: right;
+}
+
+.header_profile>img {
+    height: 100%;
+}
+
+.profile_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    margin-left: 16px;
+}
+
+.main_menu {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #00ffff;
+}
+
+.container {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item_cell {
+    width: 90%;
+    height: 6em;
+    border: 2px solid black;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.search_form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 17em;
+    border: 2px solid black;
+    border-radius: 1em;
+}
+
+.input_form {
+    display: flex;
+    align-items: center;
+    height: 2em;
+}
+
+.input_datetime {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.input_datetime>input {
+    width: 50%;
+    text-align: center;
+}
+
+.button {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 8px;
+}
+
+.input_form>label {
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.input_form>input {
+    width: 2em;
+    height: 1.5em;
+    padding-left: 0.25em;
+}
+
+.cell_button {
+    height: 4em;
+    width: 100%;
+    margin-top: -16px;
+    border-radius: 8px;
+}
+
+.basket_nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+.basket_nav>a {
+    text-decoration: none;
+    font-size: 32px;
+    color: #3e5c76;
+}

@@ -1,0 +1,1 @@
+select TAccount_number, TFull_name, Tposition from workproject.teacher
